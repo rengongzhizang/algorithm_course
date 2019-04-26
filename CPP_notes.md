@@ -104,18 +104,59 @@ for (auto& it : map) {
 }
 ```
 ## Heap/Priority Queue (priority_queue<>)
-* priority_queue<T> Please notice that pq in c++ is a max heap
+* priority_queue<T> 
+
+__Please notice that pq in c++ is a max heap__
+__Please notice that #include <queue>__
 ### Initialization:
 ```
-priority_queue<int> pq;
+priority_queue<int> pq;         // max heap
+priority_queue<int, vector<int>, greater<int>> pq;      // second argument: container, third argument: comparitor
 ```
+
+```
+vector<int> vec = {1,2,3,4};
+priority_queue<int, vector<int>, greater<int>> pq(vec.begin(), vec.end());
+```
+
 ### APIs:
+```
+pq.push(x);
+int x = pq.top();
+pq.pop();
+```
 
 
 ## Deque/ Queue / Stack (deque<>, queue<>, vector<>)
 * deque<T>
 * queue<T>
 * vector<T>
+
+### Queue initialization:
+```
+queue<int> q;
+```
+### Queue APIs:
+```
+q.push(x);
+int fist = q.front();
+int last = q.back();
+```
+
+### Deque initialization:
+```
+deque<int> dq;
+```
+### Deque APIs:
+```
+dq.push_back();
+dq.pop_back();
+dq.push_front();
+dq.pop_front();
+dq.front();
+dq.back();
+dq.at();        //quiet similar to vector
+```
 
 
 ## Pair/ Tuple (pair<>, tuple<>)
