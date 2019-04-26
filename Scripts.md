@@ -75,3 +75,28 @@ pq.pop();
 ```
 
 ## Deque/ Queue / Stack (deque<>, queue<>, vector<>)
+### Queue Initialization:
+```
+queue<int> q;
+```
+### Queue APIs:
+```
+q.push();
+q.pop();
+q.front();
+q.back();
+```
+### Deque Initialization:
+```
+deque<int> dq;
+```
+### Deque APIs:
+```
+dq.push_back();
+dq.pop_back();
+dq.push_front();
+dq.po_front();
+dq.front();
+dq.back();
+dq.at();
+```
