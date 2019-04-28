@@ -100,3 +100,96 @@ dq.front();
 dq.back();
 dq.at();
 ```
+
+#  ARP 26, 2019
+
+## orders:
+* Initialization
+* APIs
+* iterator (if exists)
+
+## Dynamic array (vector<>, ListArray<>)
+```
+#include <vector>;
+vector<int> vec = {};
+vector<int> vec (n, x);
+vector<vector<int>> mat (m, vector<int> (n, x));
+vector<vector<vector<int>>> tsr (l, vector<vector<int>> (m, vector<int> (x, n)));
+```
+```
+vec.push_back();
+vec.pop_back();
+vec.front();
+vec.back();
+```
+```
+for (auto& x : vec) {
+    int val = x;
+}
+```
+
+## HashMap (unordered_map<>, unordered_set<>)
+```
+#include <unordered_map>;
+unordered_map<int, int> map;
+```
+```
+map[key] = value;
+map.insert({key, value});
+map.contain(key);
+int value = map[key];
+auto it = map.find(key);
+return it == map.end() ? 0 : 1;
+```
+```
+for (auto it = map.begin(); it != map.end(); it++) {
+    key = it -> first;
+    value = it -> second;
+}
+
+for (auto& it : map) {
+    key = it.first;
+    value = it.second;
+}
+```
+
+## Heap/Priority Queue (priority_queue<>)
+```
+#include <queue>;
+#include <vector>;
+#include <functional>;
+prioirty_queue<int> pq;
+priority_queue<int, vector<int>, greater<int>> pq({1,2,3});     // WRONG!
+//it should be :
+priority_queue<int, vector<int>, greater<int>> pq(vec.begin(), vec.end());
+```
+```
+int max/min = pq.top();
+pq.push();
+pq.pop();
+//
+pq.at();
+pq.front();
+pq.back();
+// Those three don't belong here;
+```
+```
+NOT ITERABLE
+```
+
+## Deque/ Queue / Stack (deque<>, queue<>, vector<>)
+```
+#include <queue>;
+#include <deque>;
+queue<int> q;
+deque<int> dq;
+```
+```
+dq/q.push();
+dq/q.pop();
+dq/q.front();
+dq/q.back();
+dq.at();                    //only deque has this
+dq/q.front();
+dq/q.back();
+```
