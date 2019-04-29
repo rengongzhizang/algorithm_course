@@ -193,3 +193,76 @@ dq.at();                    //only deque has this
 dq/q.front();
 dq/q.back();
 ```
+
+#  ARP 29, 2019
+## orders:
+* Initialization
+* APIs
+* iterator (if exists)
+
+
+## Dynamic array (vector<>, ListArray<>)
+```
+vector<int> vec(x,n);
+vector<vector<int>> mat(m, vector<int>(n,x));
+vector<vector<vector<int>>> tsr(l, vector<vector<int>>(m, vector<int>(n, x)));
+vec.front();
+vec.back();
+vec.push_back();
+vec.po_back();
+for (auto& x : vec) {
+    int value = m;
+}
+for (auto it = vec.begin(); it != vec.end(); it++) {
+    int value = *it;
+}
+```
+
+## HashMap (unordered_map<>, unordered_set<>)
+```
+unordered_map<int,int> map;
+map.insert({k, v});
+map[key] = v;
+int v = map[k];
+map.contain(k);
+return map.find(k) != map.end() ? 1 : 0;
+for (auto it = map.begin(); it != map.end(); it++) {
+    int k = it -> first;
+    int v = it -> second;
+}
+for (auto& it : map) {
+    int k = it.first();
+    int v = it.second();
+}
+```
+
+## Heap/Priority Queue (priority_queue<>)
+```
+#include <queue>
+#include <vector>
+#include <functional>
+
+priority_queue<int> pq;
+vector<int> vec(x, n);
+priority_queue<int, vector<int>, greater<int>> pq(vec.begin(), vec.end());
+pq.push();
+pq.top();
+pq.pop();
+```
+
+## Deque/ Queue / Stack (deque<>, queue<>, vector<>)
+```
+deque<int> dq;
+dq.push_back();
+dq.pop_back();
+dq.push_front();
+dq.push_back();
+dq.front();
+dq.back();
+dq.at();
+queue<int> q;
+q.front();
+q.back();
+q.push();
+q.pop();
+```
