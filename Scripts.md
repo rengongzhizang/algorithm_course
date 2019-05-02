@@ -364,3 +364,102 @@ p1.first = 1;
 p1.second = 2;
 p3 = make_pair("Hello", 1);
 ```
+
+
+#  May 2, 2019
+## orders:
+* Initialization
+* APIs
+* iterator (if exists)
+
+## Dynamic Array;
+```
+vector<int> vec = {};
+vector<int> vec(n,x);
+vector<vector<int>> mat(m, vector<int>(n,x));
+vector<vector<vector<int>>> tsr(l, vector<vector<int>>(m, vector<int>(n,x)));
+```
+```
+vec.push_back();
+vec.pop_back();
+vec.front();
+vec.back();
+vec.at(i);
+vec[i];
+```
+```
+for (auto it = vec.begin(); it != vec.end(); it++) {
+    int val = *it;
+}
+```
+```
+for (auto& it : vec) {
+    int val = it;
+}
+```
+
+## HashMap
+```
+unordered_map<int, int> map;
+map[key] = val;
+map.insert({key, val});
+map.contain(key);
+int val = map[key];
+auto it = map.find();
+return it != map.end() ? 1 : 0;
+```
+```
+for (auto it = map.begin(); it != map.end(); it++) {
+    int key = it -> first;
+    int val = it -> second;
+}
+```
+```
+for (auto& it : map) {
+    int key = map.first;
+    int val = map.second;
+}
+```
+
+## Heap/Priority_queue
+```
+#include <queue>
+#include <functional>
+#include <vector>
+prioirty_queue<int> pq;
+priority_queue<int, vector<int>, greater<int>> pq(vec.begin(), vec.end());
+pq.push(g);
+int maximum = pq.top();
+pq.pop();
+```
+
+## Deque/queue/stack
+```
+#include <deque>
+#include <queue>
+queue<int> q;
+q.push();
+q.pop();
+q.front();
+q.back();
+deque<int> dq;
+dq.front();
+dq.back();
+dq.push_back();
+dq.push_front();
+dq.pop_back();
+dq.pop_front();
+dq.at();
+```
+
+## Pair
+```
+#include <utility>
+pair<int, int> pair1;
+pair<string, int> pair2;
+pair<int, string> pair3(101, "love"); // review
+// pair1.make_pair(1, 101); wrong answer;
+pair1 = make_pair(1, 101);
+pair2.first = "hello";
+pair2.second = 101;
+```
