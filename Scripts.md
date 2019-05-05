@@ -463,3 +463,87 @@ pair1 = make_pair(1, 101);
 pair2.first = "hello";
 pair2.second = 101;
 ```
+
+
+#  May 5, 2019
+## orders:
+* Initialization
+* APIs
+* iterator (if exists)
+
+## vector<T>
+```
+vector<int> vec = {1,2,3};
+vector<int> vec(n,x);
+vector<vector<int>> mat(m, vector<int>(n,x));
+vector<vector<vector<int>>> tst(l, vector<vector<int>>(m, vector<int>(m,x)));
+vec.push_back();
+vec.pop_back();
+vec.at();
+vec.front();
+vec.back();
+for (auto it = vec.begin(); it != vec.end(); it++) {
+    int val = *it;
+}
+for (auto& it : vec) {
+    int val = it;
+}
+```
+## HashMap
+```
+#include <unordered_map> // there is a space ' ' between include and type
+unordered_map<int, int> map;
+map.insert({key, val});
+map[key] = val;
+if(map.contain(key)) int val = map[key];
+auto it = map.find(key);
+return it != map.end() ? 1 : 0;
+for (auto it = map.begin(); it != map.end(); it++) {
+    int key = it -> first;
+    int val = it -> second;
+}
+for (auto& it : map) {
+    int key = it.first;
+    int val = it.second;
+}
+```
+
+## Heap
+```
+#include <vector>
+#include <queue>
+#include <functional>
+priority_queue<int> pq; // max heap
+priority_queue<int, vector<int>, greater<int>> pq(vec.begin(), vec.end());
+pq.push(g);
+pq.pop();
+int val = pq.top();
+```
+## Queue/deque/stack
+```
+queue<int> q;
+deque<int> dq;
+q.push(g);
+q.pop();
+q.front();
+q.back();
+dq.front();
+dq.back();
+dq.push_back();
+dq.pop_back();
+dq.push_front();
+dq.pop_front();
+dq.at();
+```
+
+## Pairs
+```
+pair<int, int> p1;
+pair<string, int> p2 = {"Hello World", 27}; // this is correct, don't forget the one using constructor!
+pair<string, int> p3("hello", 27);
+pair<int,int> p4;
+p4.first = 1;
+p4.second = 2;
+pair<int, int> p5;
+p5 = make_pair(1, 2);
+```
