@@ -63,3 +63,40 @@ stack.front();
 stack.back();           # stack.top();
 ```
 
+## Tree
+Tip1: for most tree problem, the base case is that the null node has been visited
+
+### Tree Traversal (pre-, in-, post- are all describing the print order of __root node__)
+* Pre-order (print the root node first, then print its children nodes)
+```
+void preOrder(TreeNode* root) {
+    if (root == NULL) {
+        return;             // base case
+    }
+    cout << root -> val;
+    preOrder(root -> left);
+    preOrder(root -> right);
+}
+```
+* In-order (print the nodes on its left tree first, then print itself, then the children nodes on its right tree)
+
+* Post-order (print children first, then root node itself)
+
+### Basic Concepts:
+* Balanced Binary Tree
+__For each nodes__ in a BBT, the differences between its left and right deepth of that nodes are always less or equal to 1; (__Conclusion1__: Height  O(log_2(n)))
+
+* Complete Binary Tree
+All the bubles are located at the bottom right side; (__Conclusion2__: Height O(log_2(n)), all compelet BTs are BBT)
+
+* Binary Search Tree
+All offsprings' value on the left branch of the root node are less than it's value, offsprings' value on the right branch are greater than it's  value; (Doesn't has any thing to do with tree types above) (counter example of balance tree : 糖葫芦) (__Conclusion3__: in-order traversal of BST is an ascending sequence)
+
+* Complexity Analysis
+Time: Number of Nodes \times Time for each nodes
+
+Space: Depth of the Tree (O(Height), not O(logn), ex: 糖葫芦 O(n))
+
+__TWO__ Most Important Recursion Rules:
+1. request a value (int, bool, etc.) from lower level;
+2. down size a range (send down a value) through recursion tree.
