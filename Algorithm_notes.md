@@ -115,3 +115,13 @@ Definition (properties): all manipulations, especially `pq.pop()`, satisify 1. f
 * Generate: generate its nearby nodes, push them into the queue from queue's back;
 * Termination condition: quit loop when the queue is empty
 
+## BFS2 (Best First Search)
+* Usage: Shortest path cost (point to surface)
+* Example: distance between Beijing and all other major city in China
+* Data structure: `priority_queue` (min_heap)
+
+### Summary for BFS1,2:
+1. Initial state: root, start node, etc.
+2. Expansion/ Generation: 1. queue, deque, stack, etc.; 2. priority_queue
+3. Termination Condition: Q is empty, conflict, find target, k-th find out, etc.
+4. (Optional) deduplication
