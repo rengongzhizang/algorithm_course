@@ -109,3 +109,9 @@ Definition (properties): all manipulations, especially `pq.pop()`, satisify 1. f
 2. all parents nodes are __less__  (min_heap) or __greater__ (max_heap) than its descendent
 
 * Tips: online/offline algorithm: programmable with changing data (with new data feed in), only excutable when you have all data.
+
+## BFS1
+* Expand: visit a node in the front of the queue, i.e. print, save, etc.;
+* Generate: generate its nearby nodes, push them into the queue from queue's back;
+* Termination condition: quit loop when the queue is empty
+

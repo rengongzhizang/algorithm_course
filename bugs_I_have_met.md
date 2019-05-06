@@ -8,3 +8,4 @@
                                                 > >
     priority_queue<int, vector<int> > pq(vec.begin(), vec.end());
 ```
+2. pointers initialization needs a `new` key word
