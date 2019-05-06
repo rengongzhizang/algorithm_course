@@ -547,3 +547,35 @@ p4.second = 2;
 pair<int, int> p5;
 p5 = make_pair(1, 2);
 ```
+
+# May 6, 2019
+```
+vector<vector<vector<int>>> tsr(l, vector<vector<int>>(m, vector<int>(n, x)));
+vec.push_back();
+vec.pop_back();
+vec.front();
+vec.back();
+vec.at();
+vec[i];
+auto it = find(vec.begin(), vec.end(), x);  // std::find
+auto it = vec.begin()
+auto& it : vec
+unordered_map<int, int> map;
+map.insert({1,2});
+map[1] = 2;
+int val = map.contain(key) ? map[key] : -1;
+auto& it : map;
+auto it = map.find();       // std::unordered_map::find
+auto it = map.begin();
+#include <utility>
+#include <queue>
+#include <functional>
+#include <deque>
+```
+```
+pair<int, int> p1(1,2);
+p1 = {1,2};
+p1 = make_pair(1,2);
+p1.first = 1;
+p1.second = 2;
+```
