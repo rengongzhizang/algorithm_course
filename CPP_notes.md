@@ -139,6 +139,7 @@ queue<int> q;
 ### Queue APIs:
 ```
 q.push(x);
+q.pop();
 int fist = q.front();
 int last = q.back();
 ```

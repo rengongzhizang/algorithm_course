@@ -100,3 +100,12 @@ Space: Depth of the Tree (O(Height), not O(logn), ex: 糖葫芦 O(n))
 __TWO__ Most Important Recursion Rules:
 1. request a value (int, bool, etc.) from lower level;
 2. down size a range (send down a value) through recursion tree.
+
+## Heap
+Purpose: Maintain a minimum or  maximum value in a dynamic dataset
+
+Definition (properties): all manipulations, especially `pq.pop()`, satisify 1. first then 2.
+1. complete binary tree
+2. all parents nodes are __less__  (min_heap) or __greater__ (max_heap) than its descendent
+
+* Tips: online/offline algorithm: programmable with changing data (with new data feed in), only excutable when you have all data.
