@@ -163,3 +163,19 @@ dq.at();        //quiet similar to vector
 ## Pair/ Tuple (pair<>, tuple<>)
 * pair<T1, T2> 
 * tuple<T1, T2, ...>
+
+## STL API
+* sort
+```
+std::sort(begin_addres, end_addres);
+std::sort(vec.begin(), vec.end());
+std::sort(vec.begin(), vec.begin() + k);
+```
+* find
+```
+std::find(vec.begin(), vec.end(), target);
+```
+* reverse
+```
+std::reverse(iter_begin, iter_end);
+```
