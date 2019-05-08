@@ -164,6 +164,20 @@ int main() {
     for (auto& i : sol) {
         print_vec(i);
     }
-    cout<< '\n' <<"life is lonly" << '\n';
+    vector<int> vec(10,1);
+    vector<vector<int> > mat(10, vector<int>(10,1));
+    vector<vector<vector<int> > > tst(10, vector<vector<int> >(10, vector<int>(10,1)));
+    priority_queue<int, vector<int>, greater<int> >  pq(vec.begin(), vec.begin() + 2);
+    queue<int> q;
+    q.push(1);
+    q.push(2);
+    int val = q.front();
+    deque<int> dq;
+    dq.push_back(1);
+    dq.push_front(2);
+    int at_val = dq.at(1);
+    std::pair<queue<int>, priority_queue<int, vector<int>, greater<int> > > pair1(q, pq);
+    cout << at_val << '\n';
+    cout << '\n' <<"life is lonly" << '\n';
     return 0;
 }
