@@ -177,6 +177,12 @@ int main() {
     dq.push_front(2);
     int at_val = dq.at(1);
     std::pair<queue<int>, priority_queue<int, vector<int>, greater<int> > > pair1(q, pq);
+    vector<int> temp;
+    for (int i = 0; i < 10; i++) {
+        temp.push_back(i);
+    }
+    sort(temp.end() - 2, temp.end(), greater<int>());
+    print_vec(temp);
     cout << at_val << '\n';
     cout << '\n' <<"life is lonly" << '\n';
     return 0;

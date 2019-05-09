@@ -173,7 +173,7 @@ std::sort(vec.begin(), vec.begin() + k);
 ```
 * find
 ```
-std::find(vec.begin(), vec.end(), target);
+std::find(vec.begin(), vec.end(), target); // vec.end() is a pointer pointing to the back of container's boundry
 ```
 * reverse
 ```
