@@ -125,3 +125,10 @@ Definition (properties): all manipulations, especially `pq.pop()`, satisify 1. f
 2. Expansion/ Generation: 1. queue, deque, stack, etc.; 2. priority_queue
 3. Termination Condition: Q is empty, conflict, find target, k-th find out, etc.
 4. (Optional) deduplication
+
+## DFS
+* Problems that DFS tring to solve: problems related to permutations of something
+
+Basic methods:
+* How many levels in the recursion tree, what meanings of which each layer represents (what does it store)?
+* How many different states/branch should we try on each level?
