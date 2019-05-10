@@ -37,5 +37,7 @@ void print_vec(vector<string>& vec) {
 int main () {
     vector<string> res = all_valid_parentheses(3);
     print_vec(res);
+    vector<string> sol = all_valid_parentheses(5);
+    print_vec(sol);
     return 0;
 }
