@@ -127,7 +127,7 @@ Definition (properties): all manipulations, especially `pq.pop()`, satisify 1. f
 4. (Optional) deduplication
 
 ## DFS
-* Problems that DFS tring to solve: problems related to permutations of something
+* Problems that DFS tring to solve: problems related to permutations of something (ordinary time complexity O(2^n))
 
 Basic methods:
 * How many levels in the recursion tree, what meanings of which each layer represents (what does it store)?
