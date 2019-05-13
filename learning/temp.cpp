@@ -11,6 +11,12 @@ struct TreeNode {
     TreeNode* right;
     TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
+class Greater_String_length {                                           // a comparitor class
+public:
+    bool operator() (pair<int, string> n1, pair<int, string> n2) {
+        return n1.second.length() > n2.second.length();
+    }
+};
 void print_tree(TreeNode* root, vector<vector<int> >& res) {
     if (root == NULL) {
         return;
@@ -183,6 +189,18 @@ int main() {
     }
     sort(temp.end() - 2, temp.end(), greater<int>());
     print_vec(temp);
+    std::pair<int, string> num_char_1 = {1, "I am a str"};
+    std::pair<int, string> num_char_2(2, "I am a string");
+    std::pair<int, string> num_char_3;
+    num_char_3.first = 3;
+    num_char_3.second = "I am a string3";
+    typedef std::pair<int, string> num_char;
+    vector<num_char> num_char_list = {num_char_1, num_char_2, num_char_3};
+    priority_queue<std::pair<int, string>, vector<std::pair<int, string>>, Greater_String_length> ppq(num_char_list.begin(), num_char_list.end());
+    while (!ppq.empty()) {
+        cout << ppq.top().first << endl;
+        ppq.pop();
+    }
     cout << at_val << '\n';
     cout << '\n' <<"life is lonly" << '\n';
     return 0;
