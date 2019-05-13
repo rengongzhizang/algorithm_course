@@ -4,6 +4,7 @@
 
 using namespace std;
 /*
+method 1:
                 abc
                /   \
             a       ' '
@@ -21,6 +22,14 @@ using namespace std;
            ac a    bc b    c ''
               /\      /\  /\ /\
             ad a     bd b cd c d ''
+
+method 2:
+                    abc
+             /       |       \
+             a       b        c
+           /  \    /   \    /   \
+         ab   ac  bc
+
 */
 
 void subsets_helper(string& str, vector<string>& res, string& sub, int k, int level) {
@@ -34,14 +43,30 @@ void subsets_helper(string& str, vector<string>& res, string& sub, int k, int le
     subsets_helper(str, res, sub, k, level + 1);
 }
 
-vector<string> subsets_with_k_element(string& str, int k) {
+void method2_helper(string& str, string& sub, vector<string>& res, int level, int k) {
+    if (sub.size() == k) {
+        res.push_back(sub);
+        return;
+    }
+    for (int i = level; i < str.size(); i++) {
+        sub.push_back(str[i]);
+        method2_helper(str, sub, res, i + 1, k);
+        sub.pop_back();
+    }
+} 
+
+pair<vector<string>, vector<string>> subsets_with_k_element(string& str, int k) {
     if (str.size() < 1) {
-        return vector<string>();
+        return pair<vector<string>,vector<string>>();
     }
     vector<string> res;
     string sub;
     subsets_helper(str, res, sub, k, 0);
-    return res;
+    vector<string> sol;
+    string temp;
+    method2_helper(str, temp, sol, 0, k);
+    pair<vector<string>, vector<string>> p(res, sol);
+    return p;
 }
 
 void print_vec(vector<string>& vec) {
@@ -50,9 +75,13 @@ void print_vec(vector<string>& vec) {
     }
 }
 
+
 int main () {
     string str = "abcd";
-    vector<string> vec = subsets_with_k_element(str, 2);
-    print_vec(vec);
+    pair<vector<string>, vector<string>> p = subsets_with_k_element(str, 2);
+    vector<string> res = p.first;
+    vector<string> sol = p.second;
+    //print_vec(res);
+    print_vec(sol);
     return 0;
 }
