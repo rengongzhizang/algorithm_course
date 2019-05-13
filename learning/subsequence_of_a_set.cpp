@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <algorithm>
 
 using namespace std;
 
@@ -36,7 +37,9 @@ void print_vec(vector<string>& vec) {
 }
 
 int main() {
-    string str = "abbbc";
+    string str = "bcbab";
+    sort(str.begin(), str.end());
+    cout << str << endl;
     vector<string> res = subsequences(str);
     print_vec(res);
     return 0;
