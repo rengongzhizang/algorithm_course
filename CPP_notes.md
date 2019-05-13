@@ -165,7 +165,7 @@ dq.at();        //quiet similar to vector
 * tuple<T1, T2, ...>
 
 ## STL API
-* sort
+* sort (not only sorting numbers, but also sorting strings)
 ```
 std::sort(begin_addres, end_addres);
 std::sort(vec.begin(), vec.end());
