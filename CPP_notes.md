@@ -179,3 +179,16 @@ std::find(vec.begin(), vec.end(), target); // vec.end() is a pointer pointing to
 ```
 std::reverse(iter_begin, iter_end);
 ```
+
+## Compare class
+```
+typedef pair<int, string> p;
+class Greater_string_length {
+public:
+    bool operator() pair(p n1, p n2) {
+    return n1.length() > n2.length();
+    }
+};
+vector<p> vec = {n1, n2, n3};
+priority_queue<p, vector<p>, Greater_string_length> pq(vec.begin(), vec.end());
+```
