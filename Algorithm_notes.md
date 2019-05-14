@@ -132,3 +132,16 @@ Definition (properties): all manipulations, especially `pq.pop()`, satisify 1. f
 Basic methods:
 * How many levels in the recursion tree, what meanings of which each layer represents (what does it store)?
 * How many different states/branch should we try on each level?
+
+Vintage Questions:
+1. all subset (no duplications)
+* mutants: with duplication (use 'high speed way' to deal with it), only have k elements(pruning the recursion tree), etc.
+2. valid parenthesis (only parenthesis)
+* mutants: with different types `{}[]()` (use stack to solve it), with priorities `{ > [ > (`
+3. 99 cents
+* mutant: combination of factors (find all factors first)
+4. permutations (no duplications) (when all the outcomes exist in the input, then swap it)
+* mutants: permutations with duplication; shuffle numbers to make a intervel between two 'i's whose length equals to i (this problem is not perfect for this catagory).
+5. n queens (n levels, each level determines all possible position to locate a specific queen)
+* mutant: n queens with block in the check map;
+6. a random maze (dig out with step length of 2)
